@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BoardGameApp.Api</name>
+    </assembly>
+    <members>
+        <member name="M:BoardGameApp.Api.Controllers.WeatherForecastController.Get">
+            <summary>
+            Get the weather forecast
+            </summary>
+            <returns>The weather forecast</returns>
+            <response code="200">Returns the weather forecast</response>
+            <response code="500">When there is an internal server error</response>
+        </member>
+    </members>
+</doc>
