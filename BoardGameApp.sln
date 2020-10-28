@@ -27,9 +27,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{999B6A4A-B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{B3CD5C90-EF60-4BCD-AFCB-01B866FAFE62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "IntegrationTests\IntegrationTests.csproj", "{DCD4E879-FC9D-4E4E-8255-073B68D7032E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "tests\IntegrationTests\IntegrationTests.csproj", "{DCD4E879-FC9D-4E4E-8255-073B68D7032E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fixtures", "Fixtures\Fixtures.csproj", "{29A528F7-60A4-44D1-A3DD-2EB12AE544CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fixtures", "tests\Fixtures\Fixtures.csproj", "{29A528F7-60A4-44D1-A3DD-2EB12AE544CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

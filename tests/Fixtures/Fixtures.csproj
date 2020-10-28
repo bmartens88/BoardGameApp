@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\BoardGameApp.Infrastructure.Persistence\BoardGameApp.Infrastructure.Persistence.csproj" />
+    <ProjectReference Include="..\..\src\BoardGameApp.Infrastructure.Persistence\BoardGameApp.Infrastructure.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
