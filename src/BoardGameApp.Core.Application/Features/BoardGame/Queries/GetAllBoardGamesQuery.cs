@@ -23,9 +23,9 @@ namespace BoardGameApp.Core.Application.Features.BoardGame.Queries
                 _mapper = mapper;
             }
 
-            public async Task<IEnumerable<BoardGameDTO>> Handle(GetAllBoardGamesQuery request, CancellationToken cancellationToken)
+            public async Task<IEnumerable<BoardGameDTO>> Handle(GetAllBoardGamesQuery _, CancellationToken cancellationToken)
             {
-                var spec = new BoardGamesWithPublisherSpecification();
+                var spec = new AllBoardGamesWithPublisherSpecification();
                 var items = await _unitOfWork.Repository<Domain.Entities.BoardGame>().ListAsync(spec);
                 return _mapper.Map<IEnumerable<BoardGameDTO>>(items);
             }

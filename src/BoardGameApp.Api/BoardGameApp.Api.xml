@@ -11,6 +11,15 @@
             <returns>All board games in the system</returns>
             <response code="200">Returns all board games in the system</response>
         </member>
+        <member name="M:BoardGameApp.Api.Controllers.v1.BoardGamesController.GetBoardGameById(System.Int32)">
+            <summary>
+            Get a board game by id
+            </summary>
+            <param name="id">The id of the board game to get</param>
+            <returns>The board game with the given id</returns>
+            <response code="200">Returns the board game with the given id</response>
+            <response code="404">When no board game with the given id is found</response>
+        </member>
         <member name="M:BoardGameApp.Api.Controllers.WeatherForecastController.Get">
             <summary>
             Get the weather forecast

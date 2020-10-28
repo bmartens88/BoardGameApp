@@ -2,9 +2,9 @@
 
 namespace BoardGameApp.Core.Application.Specifications.BoardGame
 {
-    public class BoardGamesWithPublisherSpecification : Specification<Domain.Entities.BoardGame>
+    public class AllBoardGamesWithPublisherSpecification : Specification<Domain.Entities.BoardGame>
     {
-        public BoardGamesWithPublisherSpecification()
+        public AllBoardGamesWithPublisherSpecification()
         {
             Query
                 .Include(b => b.Publisher);

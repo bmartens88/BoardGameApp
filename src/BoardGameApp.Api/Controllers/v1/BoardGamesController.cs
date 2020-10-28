@@ -22,5 +22,22 @@ namespace BoardGameApp.Api.Controllers.v1
             var result = await Mediator.Send(new GetAllBoardGamesQuery());
             return Ok(result);
         }
+
+        /// <summary>
+        /// Get a board game by id
+        /// </summary>
+        /// <param name="id">The id of the board game to get</param>
+        /// <returns>The board game with the given id</returns>
+        /// <response code="200">Returns the board game with the given id</response>
+        /// <response code="404">When no board game with the given id is found</response>
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<BoardGameDTO>> GetBoardGameById(int id)
+        {
+            var result = await Mediator.Send(new GetBoardGameByIdQuery { Id = id });
+            if (result == null) return NotFound();
+            return Ok(result);
+        }
     }
 }
