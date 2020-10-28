@@ -19,8 +19,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BoardGameApp.Infrastructure.Shared\BoardGameApp.Infrastructure.Shared.csproj" />
-    <ProjectReference Include="..\Identity\BoardGameApp.Infrastructure.Identity.csproj" />
-    <ProjectReference Include="..\Persistence\BoardGameApp.Infrastructure.Persistence.csproj" />
+    <ProjectReference Include="..\BoardGameApp.Infrastructure.Identity\BoardGameApp.Infrastructure.Identity.csproj" />
+    <ProjectReference Include="..\BoardGameApp.Infrastructure.Persistence\BoardGameApp.Infrastructure.Persistence.csproj" />
   </ItemGroup>
 
 
