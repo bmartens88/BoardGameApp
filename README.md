@@ -34,7 +34,7 @@ These credentials can be used to generate a valid JWT token.
 - [x] AutoMapper
 - [x] Specification using [Specification](https://github.com/ardalis/Specification)
 - [x] Unit of Work Pattern
-- [ ] Unit/Integration-Testing
+- [x] Unit/Integration-Testing
 - [ ] Docker
 - [ ] Azure Deployment
 - [ ] Azure DevOps Pipeline
