@@ -1,10 +1,11 @@
-﻿using Application.Interfaces;
-using Domain.Entities;
+﻿using BoardGameApp.Core.Application.Interfaces;
+using BoardGameApp.Core.Domain.Common;
+using BoardGameApp.Infrastructure.Persistence.Data.Contexts;
 using System;
 using System.Collections;
 using System.Threading.Tasks;
 
-namespace Persistence.Data
+namespace BoardGameApp.Infrastructure.Persistence.Data
 {
     public class UnitOfWork : IUnitOfWork
     {

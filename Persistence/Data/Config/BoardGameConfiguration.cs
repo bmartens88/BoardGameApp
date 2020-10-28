@@ -1,8 +1,8 @@
-﻿using Domain.Entities;
+﻿using BoardGameApp.Core.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Persistence.Data.Config
+namespace BoardGameApp.Infrastructure.Persistence.Data.Config
 {
     public class BoardGameConfiguration : IEntityTypeConfiguration<BoardGame>
     {
@@ -35,6 +35,9 @@ namespace Persistence.Data.Config
             builder.Property(b => b.Price)
                 .IsRequired(false)
                 .HasColumnType("decimal(5,2)");
+
+            builder.Property(b => b.PictureUri)
+                .IsRequired(false);
 
             builder.HasOne(b => b.Publisher)
                 .WithMany()

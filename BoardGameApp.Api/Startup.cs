@@ -1,12 +1,13 @@
-using Application;
 using BoardGameApp.Api.Extensions;
+using BoardGameApp.Core.Application;
+using BoardGameApp.Infrastructure.Persistence;
+using BoardGameApp.Infrastructure.Shared;
+using Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Persistence;
 
 namespace BoardGameApp.Api
 {
@@ -22,16 +23,13 @@ namespace BoardGameApp.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddApplicationLayer()
-                .AddPersistence(_configuration)
-                .AddApiVersioning(options =>
-                {
-                    options.DefaultApiVersion = new ApiVersion(1, 0);
-                    options.AssumeDefaultVersionWhenUnspecified = true;
-                    options.ReportApiVersions = true;
-                })
-                .AddSwagger()
-                .AddControllers();
+            services.AddApplicationCore();
+            services.AddPersistenceInfrastructure(_configuration);
+            services.AddIdentityInfrastructure(_configuration);
+            services.AddSharedInfrastructure();
+            services.AddSwagger();
+            services.AddApiVersion();
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +49,8 @@ namespace BoardGameApp.Api
             });
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

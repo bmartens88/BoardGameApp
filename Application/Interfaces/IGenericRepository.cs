@@ -1,9 +1,9 @@
 ﻿using Ardalis.Specification;
-using Domain.Entities;
+using BoardGameApp.Core.Domain.Common;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Application.Interfaces
+namespace BoardGameApp.Core.Application.Interfaces
 {
     public interface IGenericRepository<T> where T : BaseEntity
     {

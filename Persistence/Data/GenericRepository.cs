@@ -1,13 +1,14 @@
-﻿using Application.Interfaces;
-using Ardalis.Specification;
+﻿using Ardalis.Specification;
 using Ardalis.Specification.EntityFrameworkCore;
-using Domain.Entities;
+using BoardGameApp.Core.Application.Interfaces;
+using BoardGameApp.Core.Domain.Common;
+using BoardGameApp.Infrastructure.Persistence.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Persistence.Data
+namespace BoardGameApp.Infrastructure.Persistence.Data
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     {

@@ -1,4 +1,6 @@
-﻿namespace Domain.Entities
+﻿using BoardGameApp.Core.Domain.Common;
+
+namespace BoardGameApp.Core.Domain.Entities
 {
     public class Publisher : BaseEntity
     {

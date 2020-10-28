@@ -4,6 +4,13 @@
         <name>BoardGameApp.Api</name>
     </assembly>
     <members>
+        <member name="M:BoardGameApp.Api.Controllers.v1.BoardGamesController.GetAllBoardGames">
+            <summary>
+            Get all the board games in the system
+            </summary>
+            <returns>All board games in the system</returns>
+            <response code="200">Returns all board games in the system</response>
+        </member>
         <member name="M:BoardGameApp.Api.Controllers.WeatherForecastController.Get">
             <summary>
             Get the weather forecast

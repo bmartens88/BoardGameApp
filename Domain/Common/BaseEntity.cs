@@ -1,4 +1,4 @@
-﻿namespace Domain.Entities
+﻿namespace BoardGameApp.Core.Domain.Common
 {
     public abstract class BaseEntity
     {

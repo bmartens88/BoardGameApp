@@ -1,8 +1,8 @@
-﻿using Domain.Entities;
+﻿using BoardGameApp.Core.Domain.Common;
 using System;
 using System.Threading.Tasks;
 
-namespace Application.Interfaces
+namespace BoardGameApp.Core.Application.Interfaces
 {
     public interface IUnitOfWork : IDisposable
     {

@@ -10,11 +10,17 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="4.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Persistence\Persistence.csproj" />
+    <ProjectReference Include="..\BoardGameApp.Infrastructure.Shared\BoardGameApp.Infrastructure.Shared.csproj" />
+    <ProjectReference Include="..\Identity\BoardGameApp.Infrastructure.Identity.csproj" />
+    <ProjectReference Include="..\Persistence\BoardGameApp.Infrastructure.Persistence.csproj" />
   </ItemGroup>
 
 
